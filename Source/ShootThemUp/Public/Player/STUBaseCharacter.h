@@ -1,5 +1,4 @@
 
-
 #pragma once
 
 #include "CoreMinimal.h"
@@ -8,6 +7,8 @@
 
 class UCameraComponent;
 class USpringArmComponent;
+class USTUHealthComponent;
+class UTextRenderComponent;
 
 UCLASS()
 class SHOOTTHEMUP_API ASTUBaseCharacter : public ACharacter
@@ -27,6 +28,12 @@ protected:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components")
     USpringArmComponent* SpringArmComponent;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components", meta = (ClampMin = "0.0", ClampMax = "1000.0"))
+    USTUHealthComponent* HealthComponent;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components")
+    UTextRenderComponent* HealthTextComponent;
 
 public:	
 	// Called every frame
