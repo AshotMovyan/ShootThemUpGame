@@ -56,4 +56,7 @@ private:
 
 	bool bIsMovingForward = false;
     bool bWantsToRuning = false;
+
+
 };
+
